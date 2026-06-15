@@ -10,6 +10,17 @@ comparable across studies. It is the reporting instrument from *Towards Trustwor
 AI-driven Cuffless Blood Pressure Monitoring* (Cisnal et al., npj Digital Medicine, in
 press). This repository provides a small, dependency-light Python implementation.
 
+
+<p align="center">
+  <img src="figures/bpcard_framework.pdf"
+       alt="Overview of the BP-Card reporting and validation framework"
+       width="800">
+</p>
+
+<p align="center">
+  <em>Figure 1. Overview of the BP-Card reporting and validation framework.</em>
+</p>
+
 ## What This Repository Provides
 
 - Standardized BP-Card performance tables (Modules 3A / 3B)
