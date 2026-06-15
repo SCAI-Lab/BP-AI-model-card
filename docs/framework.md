@@ -8,8 +8,9 @@ evaluation pathways.
 
 
 
+
 <p align="center">
-  <img src="..figures/aurora-bp.png"
+  <img src="../figures/aurora-bp.png"
        alt="Worked example of the BP-Card reporting framework applied to a calibration-based cuffless blood pressure model using the Aurora-BP dataset."
        width="800">
 </p>
@@ -17,6 +18,8 @@ evaluation pathways.
 <p align="center">
   <em>Worked example of the BP-Card reporting framework applied to a calibration-based cuffless blood pressure model using the Aurora-BP dataset.</em>
 </p>
+
+
 
 
 ## Why it exists
