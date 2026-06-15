@@ -3,14 +3,16 @@ Blood Pressure Estimation Models: A Guideline and Tutorial on Correct Model repo
 
 # BP-Card
 
-A reporting and validation framework for AI-driven cuffless blood pressure (BP) estimation.
+BP-Card is a reporting and validation framework for AI-driven cuffless blood pressure (BP) estimation. It standardizes how cuffless BP models are reported and validated, so results are comparable across studies. It is the reporting instrument from *Towards Trustworthy AI-driven Cuffless Blood Pressure Monitoring* (Cisnal et al., npj Digital Medicine, in press).
 
-BP-Card standardizes how cuffless BP models are reported and validated, so results are
-comparable across studies. It is the reporting instrument from *Towards Trustworthy
-AI-driven Cuffless Blood Pressure Monitoring* (Cisnal et al., npj Digital Medicine, in
-press). This repository provides a small, dependency-light Python implementation.
+This repository provides:
 
-
+- BP-Card style figure generation for panels `(a)` through `(f)`
+- Standardized performance reporting tables for calibration-free models
+- Standardized performance reporting tables for calibration-based models
+- Example CSV files for both reporting pathways
+- Documentation for BP-Card modules and reporting checklists
+- 
 <p align="center">
   <img src="figures/figure8_v4.svg"
        alt="Overview of the BP-Card reporting and validation framework"
@@ -21,22 +23,40 @@ press). This repository provides a small, dependency-light Python implementation
   <em>Overview of the BP-Card reporting and validation framework.</em>
 </p>
 
-## What This Repository Provides
+## Repository Structure
 
-- Standardized BP-Card performance tables (Modules 3A / 3B)
-- Metrics: MD±SD, MAD, MAPD, CP5 / CP10 / CP15, R, and ΔBP±SD
-- Correlation and Bland–Altman plotting utilities
-- A reporting checklist for BP-Card Modules 0–3
+```
+BP-AI-Model-Card/
+├── bp-card-generator/
+│   ├── data/
+│   │   ├── calibration_based_performance_table.csv
+│   │   └── calibration_free_performance_table.csv
+│   ├── BP_card_generator.ipynb
+│   ├── bp_card_figures.py
+│   └── requirements.txt
+├── docs/
+│   ├── framework.md
+│   └── reporting-checklist.md
+├── figures/
+│   ├── aurora-bp.png
+│   └── figure8_v4.svg
+├── .gitignore
+├── LICENSE
+└── README.md
+```
+
 
 ## Quick Start
 
 ```bash
-pip install -r requirement.txt
+cd bp-card-generator
+pip install -r requirements.txt
 jupyter notebook BP_card_generator.ipynb
 ```
+
 Run the notebook cells to create:
 
-```text
+```
 fig_a.png
 fig_b.png
 fig_c.png
@@ -65,8 +85,7 @@ train,Static,118,120,117
 test,Dynamic,128,130,129
 ```
 
-The code does not calculate groups or conditions. It uses the labels already
-present in the CSV files.
+The code does not calculate groups or conditions. It uses the labels already present in the CSV files.
 
 
 ## Minimal Example
@@ -76,30 +95,32 @@ See `BP_card_generator.ipynb` for the complete runnable example. The notebook lo
 
 ## BP-Card Framework
 
-The framework has four reporting modules; Module 3 is reported separately for each
-calibration pathway:
+The framework has four reporting modules; Module 3 is reported separately for each calibration pathway:
 
 - **Module 0** — clinical purpose and intended use
 - **Module 1** — dataset and cohort characteristics (including BP and ΔBP distributions)
 - **Module 2** — validation strategy (subject-wise validation is the minimum standard)
 - **Module 3A / 3B** — standardized performance reporting for calibration-free / calibration-based models
 
-See [`docs/framework.md`](docs/framework.md) for the modules and the paper's core
-methodological requirements. This also contains a worked-out example.
+See [`docs/framework.md`](docs/framework.md) for the module definitions and methodological requirements. This also contains a worked-out example.
 
-## Metrics and Standards
+## Metrics
 
-The recommended report set is **MD±SD, CP5, CP10, CP15, MAD, MAPD, and R** (MAD±SD is
-discouraged as redundant). Conformance is graded against AAMI/ISO, BHS (A–D), and
-IEEE 1708 (A–D).
+The standardized reporting tables include:
+
+- DeltaBP+/-SD
+- MD+/-SD
+- MAD
+- MAPD
+- CP5, CP10, CP15
+- Pearson R
 
 > **ΔBP sign convention.** ΔBP±SD describes the BP variation in the evaluation set, not
-> an error. Its sign depends on the subtraction order. This code defaults to the paper's
+> an error. Its sign depends on the order of subtraction. This code defaults to the paper's
 > worked-example convention, `ΔBP = baseline − current` (`delta_convention=
 > "baseline_minus_current"`). The SD is identical either way; only the mean's sign
 > changes. **State your convention when you report ΔBP.**
 
-Full definitions, formulas, and per-metric code are in [`docs/metrics.md`](docs/metrics.md).
 
 ## Reporting Checklist
 
@@ -135,7 +156,7 @@ The full checklist, including Module 3, is in [`docs/reporting-checklist.md`](do
 
 ## Citation
 
-If you use this software or the BP-Card framework, please cite the paper:
+If you use the the BP-Card framework, please cite the paper:
 
 ```bibtex
 @article{cisnal2026bpcard,
@@ -152,29 +173,9 @@ If you use this software or the BP-Card framework, please cite the paper:
 
 Update the volume, pages, and DOI once assigned.
 
-## Repository Contents
 
-```
-└── bp-card-generator/
-    ├── data                 # synthetic data for example run
-        ── calibration_based_performance_table.csv
-        ── calibration_free_performance_table.csv
-    ├── BP_card_generator.ipynb
-    └── bp_card_figures.py    # metrics, table, and plots
-    └── requirement.txt
-├── docs/
-│   ├── framework.md           # the four modules + core requirements
-│   └── reporting-checklist.md # full Modules 0–3 checklist
-└── figures/
-    ├── aurora-bp.png         # calibration-based BP model card example on Aurora BP dataset
-    └── figure8_v4.svg        # overall BP model card
-├── README.md
-├── LICENSE
-
-```
 
 
 ## License
 
-Released under the MIT License — see [`LICENSE`](LICENSE). Confirm the license and
-copyright holder suit your group before publishing.
+Released under the MIT License — see [`LICENSE`](LICENSE).
