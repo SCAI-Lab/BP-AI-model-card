@@ -153,9 +153,6 @@ Update the volume, pages, and DOI once assigned.
     └── figure8_v4.svg        # overall BP model card
 ├── README.md
 ├── LICENSE
-├── bpcard_metrics.py          
-
-
 
 ```
 
