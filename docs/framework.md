@@ -6,20 +6,17 @@ Pressure Monitoring* (Cisnal et al., npj Digital Medicine, in press). It specifi
 minimum reporting requirements and separates the calibration-free and calibration-based
 evaluation pathways.
 
-```html
+
+
 <p align="center">
-  <img src="figures/figure-9-1.png"
+  <img src="..figures/aurora-bp.png"
        alt="Worked example of the BP-Card reporting framework applied to a calibration-based cuffless blood pressure model using the Aurora-BP dataset."
        width="800">
 </p>
 
 <p align="center">
-  <em>
-  Worked example of the proposed BP-Card reporting framework applied to a calibration-based cuffless BP model using the Aurora-BP dataset. The example reports the clinical purpose and use context (Module 0), dataset and cohort characteristics (Module 1), validation strategy (Module 2), and calibration-specific performance evaluation (Module 3B). The visualizations include train and test ΔSBP distributions, ΔSBP change from calibration, scatter plots, and Bland–Altman agreement analysis.
-  </em>
+  <em>Worked example of the BP-Card reporting framework applied to a calibration-based cuffless blood pressure model using the Aurora-BP dataset.</em>
 </p>
-```
-
 
 
 ## Why it exists
