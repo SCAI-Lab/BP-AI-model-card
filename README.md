@@ -12,7 +12,7 @@ press). This repository provides a small, dependency-light Python implementation
 
 
 <p align="center">
-  <img src="figures/bpcard_framework.svg"
+  <img src="figures/figure8_v4.svg"
        alt="Overview of the BP-Card reporting and validation framework"
        width="800">
 </p>
