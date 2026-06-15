@@ -8,9 +8,7 @@ evaluation pathways.
 
 <p align="center">
   <img src="figures/Figure 9.svg"
-       alt="OWorked example of the proposed BP-Card reporting framework applied to a calibration-based
-cuffless BP model using the Aurora-BP dataset. The figure illustrates how structured reporting captures clinical purpose and
-use context (Module 0), dataset and cohort characteristics (Module 1), validation strategy (Module 2), and calibration-specific
+       alt="Worked example of the proposed BP-Card reporting framework applied to a calibration-based cuffless BP model using the Aurora-BP dataset. The figure illustrates how structured reporting captures clinical purpose and use context (Module 0), dataset and cohort characteristics (Module 1), validation strategy (Module 2), and calibration-specific
 performance evaluation (Module 3B). Included visualizations show train/test ∆SBP distributions, ∆SBP change from
 calibration, and agreement analysis using scatter and Bland–Altman plots. "
        width="800">
