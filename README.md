@@ -68,7 +68,7 @@ calibration pathway:
 - **Module 3A / 3B** — standardized performance reporting for calibration-free / calibration-based models
 
 See [`docs/framework.md`](docs/framework.md) for the modules and the paper's core
-methodological requirements.
+methodological requirements. This also contains a worked-out example.
 
 ## Metrics and Standards
 
