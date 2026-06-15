@@ -25,37 +25,54 @@ press). This repository provides a small, dependency-light Python implementation
 
 - Standardized BP-Card performance tables (Modules 3A / 3B)
 - Metrics: MD±SD, MAD, MAPD, CP5 / CP10 / CP15, R, and ΔBP±SD
-- AAMI, BHS, and IEEE 1708 conformance-grading helpers
 - Correlation and Bland–Altman plotting utilities
 - A reporting checklist for BP-Card Modules 0–3
 
 ## Quick Start
 
 ```bash
-pip install -r requirements.txt
-python bpcard_metrics.py        # runs a self-contained demonstration
+pip install -r requirement.txt
+jupyter notebook BP_card_generator.ipynb
 ```
+Run the notebook cells to create:
+
+```text
+fig_a.png
+fig_b.png
+fig_c.png
+fig_d.png
+fig_e.png
+fig_f.png
+calibration_free_performance_table.csv
+calibration_based_performance_table.csv
+```
+
+## Input CSV Format
+
+Calibration-free data should include group labels directly in the CSV:
+
+```text
+split,group,reference_bp,prediction_bp
+train,Normal,118,118.3
+test,Prehypertension,128,128.3
+```
+
+Calibration-based data should include condition labels and calibration BP:
+
+```text
+split,condition,reference_bp,prediction_bp,calibration_bp
+train,Static,118,120,117
+test,Dynamic,128,130,129
+```
+
+The code does not calculate groups or conditions. It uses the labels already
+present in the CSV files.
+
 
 ## Minimal Example
 
-```python
-import pandas as pd
-from bpcard_metrics import bp_category, performance_table
+See `BP_card_generator.ipynb` for the complete runnable example. The notebook loads the CSV files from `data/`, generates panels `(a)` through `(f)`, and displays/saves both standardized performance tables.
 
-df = pd.read_csv("examples/sample_results.csv")     # ref_sbp, pred_sbp, calib_sbp, ...
-df["group"] = [bp_category(s) for s in df["ref_sbp"]]
-
-table = performance_table(
-    df, reference="ref_sbp", prediction="pred_sbp",
-    group="group",          # BP category (3A) or calibration condition (3B)
-    baseline="calib_sbp",   # adds the ΔBP±SD column; omit if not applicable
-    grades=True,            # append AAMI / BHS / IEEE conformance columns
-)
-print(table.to_string())
-print(table.to_latex())     # publication-ready
-```
-
-A complete runnable script is in [`examples/minimal_example.py`](examples/minimal_example.py).
 
 ## BP-Card Framework
 
