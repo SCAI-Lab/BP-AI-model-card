@@ -118,8 +118,7 @@ The full checklist, including Module 3, is in [`docs/reporting-checklist.md`](do
 
 ## Citation
 
-If you use this software or the BP-Card framework, please cite the paper (see also
-[`CITATION.cff`](CITATION.cff)):
+If you use this software or the BP-Card framework, please cite the paper:
 
 ```bibtex
 @article{cisnal2026bpcard,
@@ -143,12 +142,14 @@ Update the volume, pages, and DOI once assigned.
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
-├── CITATION.cff
 ├── bpcard_metrics.py          # metrics, grading, table, and plots
 ├── docs/
 │   ├── framework.md           # the four modules + core requirements
 │   ├── metrics.md             # metric definitions, formulas, code
 │   └── reporting-checklist.md # full Modules 0–3 checklist
+└── figures/
+    ├── aurora-bp.png         # calibration-based BP model card example on Aurora BP dataset
+    └── figure8_v4.svg        # overall BP model card
 └── examples/
     ├── minimal_example.py     # runnable end-to-end example
     └── sample_results.csv     # small synthetic dataset
