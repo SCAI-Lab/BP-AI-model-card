@@ -138,21 +138,25 @@ Update the volume, pages, and DOI once assigned.
 ## Repository Contents
 
 ```
-
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── bpcard_metrics.py          # metrics, grading, table, and plots
+└── bp-card-generator/
+    ├── data                 # synthetic data for example run
+        ── calibration_based_performance_table.csv
+        ── calibration_free_performance_table.csv
+    ├── BP_card_generator.ipynb
+    └── bp_card_figures.py    # metrics, table, and plots
+    └── requirement.txt
 ├── docs/
 │   ├── framework.md           # the four modules + core requirements
-│   ├── metrics.md             # metric definitions, formulas, code
 │   └── reporting-checklist.md # full Modules 0–3 checklist
 └── figures/
     ├── aurora-bp.png         # calibration-based BP model card example on Aurora BP dataset
     └── figure8_v4.svg        # overall BP model card
-└── examples/
-    ├── minimal_example.py     # runnable end-to-end example
-    └── sample_results.csv     # small synthetic dataset
+├── README.md
+├── LICENSE
+├── bpcard_metrics.py          
+
+
+
 ```
 
 
