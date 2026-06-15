@@ -18,7 +18,7 @@ press). This repository provides a small, dependency-light Python implementation
 </p>
 
 <p align="center">
-  <em>Figure 1. Overview of the BP-Card reporting and validation framework.</em>
+  <em>Overview of the BP-Card reporting and validation framework.</em>
 </p>
 
 ## What This Repository Provides
@@ -139,7 +139,7 @@ Update the volume, pages, and DOI once assigned.
 ## Repository Contents
 
 ```
-.
+
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
@@ -154,12 +154,6 @@ Update the volume, pages, and DOI once assigned.
     └── sample_results.csv     # small synthetic dataset
 ```
 
-## Planned Additions
-
-- Volume / pages / DOI once assigned by *npj Digital Medicine*
-- Worked examples for DBP and MAP
-- Module 3B calibration-condition example (static / dynamic / time-after-calibration)
-- Bootstrap 95% confidence intervals for metrics and Bland–Altman limits of agreement
 
 ## License
 
