@@ -4,8 +4,9 @@ BP-Card is a model-card-inspired reporting framework for AI-driven cuffless bloo
 pressure (BP) estimation, introduced in *Towards Trustworthy AI-driven Cuffless Blood
 Pressure Monitoring* (Cisnal et al., npj Digital Medicine, in press). It specifies
 minimum reporting requirements and separates the calibration-free and calibration-based
-evaluation pathways. Figure 9 in the paper provides the generic template; Figure 10 a
-worked example on the Aurora-BP dataset.
+evaluation pathways.
+
+[📄 View the BP-Card example framework as PDF](figures/Figure 9.pdf)
 
 ## Why it exists
 
