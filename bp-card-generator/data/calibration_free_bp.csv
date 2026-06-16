@@ -1,0 +1,67 @@
+split,group,reference_bp,prediction_bp
+train,Normal,94,94.4
+train,Normal,98,97.7
+train,Normal,101,101.2
+train,Normal,104,103.8
+train,Normal,106,106.3
+train,Normal,109,108.6
+train,Normal,111,111.4
+train,Normal,113,112.8
+train,Normal,115,115.2
+train,Normal,117,116.7
+train,Normal,118,118.3
+train,Prehypertension,120,119.8
+train,Prehypertension,121,121.3
+train,Prehypertension,123,122.7
+train,Prehypertension,124,124.2
+train,Prehypertension,126,125.6
+train,Prehypertension,127,127.4
+train,Prehypertension,129,128.7
+train,Prehypertension,130,130.2
+train,Prehypertension,132,131.8
+train,Prehypertension,133,133.3
+train,Prehypertension,135,134.6
+train,Prehypertension,136,136.4
+train,Prehypertension,138,137.7
+train,Prehypertension,139,139.2
+train,Hypertension Stage 1,141,140.7
+train,Hypertension Stage 1,142,142.3
+train,Hypertension Stage 1,144,143.8
+train,Hypertension Stage 1,145,145.2
+train,Hypertension Stage 1,147,146.6
+train,Hypertension Stage 1,148,148.4
+train,Hypertension Stage 1,150,149.7
+train,Hypertension Stage 1,151,151.3
+train,Hypertension Stage 1,153,152.8
+train,Hypertension Stage 1,154,154.2
+train,Hypertension Stage 1,156,155.6
+train,Hypertension Stage 1,158,158.3
+train,Hypertension Stage 2,160,159.7
+train,Hypertension Stage 2,162,162.2
+train,Hypertension Stage 2,165,164.6
+train,Hypertension Stage 2,168,168.3
+train,Hypertension Stage 2,171,170.7
+train,Hypertension Stage 2,176,176.4
+train,Hypertension Stage 2,181,180.6
+test,Normal,96,96.3
+test,Normal,100,99.7
+test,Normal,105,105.2
+test,Normal,110,109.8
+test,Normal,114,114.3
+test,Normal,118,117.6
+test,Prehypertension,121,121.2
+test,Prehypertension,125,124.7
+test,Prehypertension,128,128.3
+test,Prehypertension,131,130.8
+test,Prehypertension,134,134.2
+test,Prehypertension,137,136.6
+test,Hypertension Stage 1,140,140.3
+test,Hypertension Stage 1,143,142.7
+test,Hypertension Stage 1,146,146.2
+test,Hypertension Stage 1,149,148.8
+test,Hypertension Stage 1,152,152.3
+test,Hypertension Stage 1,155,154.7
+test,Hypertension Stage 1,159,159.2
+test,Hypertension Stage 2,163,162.7
+test,Hypertension Stage 2,167,167.3
+test,Hypertension Stage 2,172,171.6
